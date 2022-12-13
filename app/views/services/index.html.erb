@@ -1,2 +1,14 @@
-<h1>Services#index</h1>
-<p>Find me in app/views/services/index.html.erb</p>
+<h1>Nos services</h1>
+<div><%= link_to 'New Service', new_service_path, :class=>"btn btn-primary" %>
+</div>
+
+<div>
+<% @services.each do |service| %>
+  <div class="card">
+
+      <h5><%= service.name %></h5>
+      <p><%= service.time %></p>
+<%= link_to 'voir le détail', service  %>
+    <% end %>
+  </div>
+</div>

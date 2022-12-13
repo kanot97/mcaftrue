@@ -1,22 +1,15 @@
 <h1>Appoints#index</h1>
 <p>Find me in app/views/appoints/index.html.erb</p>
-<div class="container">
-    <div class = "row">
-      <% @appoints.each do |pak| %>
-          <div class="col-4">
-            <div class="card1">
-              <%= link_to "voir le detail", appoint %>
-                <div class="card-infos1">
-                  <div>
-                <h2><%= appoint.name %> </h2>
-                <p> <%= appoint.description %></p>
-                <p> <%= appoint.start_at %></p>
-           
 
-            </div>
-          </div>
-      <% end %>
-    </div>
+<% @appoints.each do |appoint| %>
+  <div class="card">
+
+      <h5><%= appoint.title %></h5>
+      <p><%= appoint.description %></p>
+      <p><%= appoint.horaire %></p>
+
+<%= link_to 'voir le détail', appoint  %>
+<% end %>
   </div>
-<%= link_to 'Prendre rendez-vous', appoints_new_path %>
-<%= link_to 'Voir les rendez-vous', appoints_show_path %>
+
+  <%= link_to 'Prendre rendez-vous', new_appoint_path %>

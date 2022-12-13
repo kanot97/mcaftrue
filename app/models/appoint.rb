@@ -4,5 +4,5 @@ class Appoint < ApplicationRecord
 
   validates :title, presence: true
   validates :description, presence: true
-  validates :start_at, presence: true
+  validates :horaire, presence: true
 end

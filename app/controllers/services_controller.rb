@@ -15,7 +15,7 @@ class ServicesController < ApplicationController
   def create
     @service = Service.new(service_params)
     if @service.save
-      redirect_to @service
+      redirect_to services_path
     else
       render :new
     end
@@ -40,7 +40,7 @@ class ServicesController < ApplicationController
   private
 
   def service_params
-    params.require(:service).permit(:skill)
+    params.require(:service).permit(:name, :description, :time, :price)
   end
 
   def set_service

@@ -1,2 +1,13 @@
 <h1>Services#show</h1>
 <p>Find me in app/views/services/show.html.erb</p>
+  <div class="card">
+    <%= link_to 'modifier un service',edit_service_path  %>
+
+
+      <h5><%= @service.name %></h5>
+      <p><%= @service.description %></p>
+      <p><%= @service.time %></p>
+      <p><%= @service.price %></p>
+      <%= link_to "delete", service_path(@service), data: { turbo_method: :delete}%>
+
+  </div>

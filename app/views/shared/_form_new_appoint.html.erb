@@ -1,0 +1,6 @@
+<% simple_form_for @appoints do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :start_at, as: :datetime  %>
+  <%= f.submit %>
+<% end %>

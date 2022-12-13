@@ -6,7 +6,8 @@ class User < ApplicationRecord
 
   has_many :appoints, through: :registres
   has_many :registres
-  
+  has_many :services, through: :registres
+
 
 
   validates :first_name, presence: true

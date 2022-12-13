@@ -1,13 +1,13 @@
 <h1>Appoints#new</h1>
 <p>Find me in app/views/appoints/new.html.erb</p>
 
-
-<% simple_form_for @appoint do |f| %>
+<%= simple_form_for @appoint do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
-  <%= f.input :start_at, as: :datetime  %>
+
+  <%= f.input :horaire, as: :date  %>
+
+  <%= f.input :horaire, as: :time  %>
   <%= f.submit %>
 <% end %>
-
-<%= link_to 'Confirmer mon rendez-vous', appoints_create_path %>
-<%= link_to "Retournez à vos reservation", appoints_index_path  %>
+<%= link_to "Retournez à vos reservation", appoints_path  %>

@@ -16,7 +16,7 @@ class AppointsController < ApplicationController
   def create
     @appoint = Appoint.new(appoint_params)
     if @appoint.save
-      redirect_to appoints_index_path(@appoint)
+      redirect_to appoints_path(@appoint)
     else
       render :new, status: :unprocessable_entity
     end
@@ -41,7 +41,7 @@ class AppointsController < ApplicationController
   private
 
   def appoint_params
-    params.require(:appoint).permit(:title, :description, :start_at)
+    params.require(:appoint).permit(:title, :description, :horaire)
   end
 
   def set_appoint

@@ -7,4 +7,4 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts 'creating database...'
 
-@appoint = Appoint.new(title: "First appointment", description: "This is the first appointment", start_at: "2021-01-01 10:00:00")
+
